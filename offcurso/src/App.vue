@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view/>
+    <router-view class="container"></router-view>
   </div>
 </template>
 
@@ -40,5 +40,9 @@ export default {
     color: var(--primery-color);
   }
 
- 
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 </style>
