@@ -1,5 +1,5 @@
 ## :books: Off Curso
-![screenshot Off Curso](https://i.imgur.com/MZP1GtZ.png)
+![screenshot Off Curso](https://i.imgur.com/IA5V1LQ.png)
 
 ## 📝 About <a name = "about"></a>
 
