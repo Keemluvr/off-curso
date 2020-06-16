@@ -7,8 +7,22 @@
     <!-- content -->
     <transition>  
       <div v-if="api">
-        <h1>Contact</h1>
-        <p>{{ api }}</p>
+        <h1>{{ api.titulo }}</h1>
+        <p>{{ api.descricao }}</p>
+        <ul>
+          <li>
+            <b>Email:</b>
+            {{ api.contato.email }}
+          </li>
+          <li>
+            <b>Telefone:</b>
+            {{ api.contato.telefone }}
+          </li>
+          <li>
+            <b>Endereco:</b>
+            {{ api.contato.endereco }}
+          </li>
+        </ul>
       </div>
     </transition>
   </div>
@@ -26,6 +40,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+  ul {
+    margin-top: 40px;
+  }
 
+  li {
+    margin-bottom: 15px;
+  }
 </style>
