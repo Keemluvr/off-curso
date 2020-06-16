@@ -1,12 +1,16 @@
 <template>
   <div>
+     <!-- loading -->
     <div v-if="loading">
       <page-loading/>
     </div>
-    <div v-if="api">
-      <h1>Contact</h1>
-      <p>{{ api }}</p>
-    </div>
+    <!-- content -->
+    <transition>  
+      <div v-if="api">
+        <h1>Contact</h1>
+        <p>{{ api }}</p>
+      </div>
+    </transition>
   </div>
 </template>
 
