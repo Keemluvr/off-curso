@@ -17,7 +17,7 @@ export default {
 
 <style>
   :root {
-    --primery-color: #234;
+    --primary-color: #234;
     --secondary-color: #4b8;
     --thirty-color: white;
   }
@@ -25,7 +25,7 @@ export default {
   body {
     margin: 0;
     font-family: "Avenir", Helvetica, Arial, sans-serif;
-    color: var(--primery-color);
+    color: var(--primary-color);
   }
 
   ul {
@@ -37,7 +37,7 @@ export default {
   a {
     font-weight: bold;
     text-decoration: none;
-    color: var(--primery-color);
+    color: var(--primary-color);
   }
 
   .container {

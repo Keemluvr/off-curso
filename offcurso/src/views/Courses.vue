@@ -1,7 +1,8 @@
 <template>
   <div>
     <div v-if="loading">
-      <bounse-loader :color="color" :size="size"></bounse-loader>      </div>
+      <page-loading/>
+    </div>
     <div v-if="api">
       <h1>Courses</h1>
       <p>{{ api }}</p>
@@ -11,19 +12,9 @@
 
 <script>
 import fetchData from "@/mixins/fetchData.js";
-import BounseLoader from 'vue-spinner/src/BounceLoader.vue'
 
 export default {
   name: "Courses",
-  data() {
-    return {
-      color: "#4b8",
-      size: "70px"
-    }
-  },
-  components: {
-    BounseLoader
-  },
   mixins: [fetchData],
   created() {
     this.fetchData("/cursos");
@@ -32,7 +23,5 @@ export default {
 </script>
 
 <style>
-.v-bounce {
-  margin: 5vh auto;
-}
+
 </style>
