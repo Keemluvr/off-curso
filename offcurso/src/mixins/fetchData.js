@@ -9,7 +9,7 @@ export default {
     fetchData(url) {
       this.loading = true
       this.api = null
-      fetch(`http://localhost:3000${url}`)
+      fetch(`https://api-off-curso.herokuapp.com${url}`)
         .then((r) => r.json())
         .then((r) => {
           
