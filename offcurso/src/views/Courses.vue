@@ -6,9 +6,19 @@
     </div>
     <!-- content -->
     <transition>  
-      <div v-if="api">
-        <h1>Courses</h1>
-        <p>{{ api }}</p>
+      <div v-if="api" class="content">
+        <div>
+          <h1>Courses</h1>
+          <p>{{ api.descricao }}</p>
+        </div>
+        <ul>
+          <li v-for="curso in api.cursos" :key="curso.id">
+            <router-link :to="{ name: 'course', params:{ curso: curso.id }}">
+              <h2>{{ curso.nome }} - {{ curso.totalAulas }} aulas | {{ curso.horas }}</h2>
+              <p>{{ curso.descricao }}</p>
+            </router-link>
+          </li>
+        </ul>
       </div>
     </transition>
   </div>
@@ -26,6 +36,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+p {
+  font-weight: normal;
+}
 </style>

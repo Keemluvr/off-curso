@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
 import Courses from '../views/Courses.vue'
+import Course from '../views/Course.vue'
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,13 @@ Vue.use(VueRouter)
     path: '/courses',
     name: 'courses',
     component: Courses
-  }
+  },
+  {
+    path: '/courses/:curso',
+    name: 'course',
+    component: Course,
+    props: true
+  },
 ]
 
 const router = new VueRouter({
